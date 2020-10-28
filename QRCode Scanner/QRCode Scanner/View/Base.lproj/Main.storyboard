@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="aJN-Xj-3UQ">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--掃描-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="QRCode_Scanner" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AOK-LV-C30">
+                                <rect key="frame" x="47" y="94" width="281" height="262"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="QRCode URL" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="snB-aK-PZF">
+                                <rect key="frame" x="37.5" y="376" width="300" height="50"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="2o6-1d-Kfv"/>
+                                    <constraint firstAttribute="width" constant="300" id="q7Q-Cn-BcM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4ju-EW-h3M">
+                                <rect key="frame" x="135" y="434" width="105" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="B1l-HM-lQb"/>
+                                    <constraint firstAttribute="width" constant="105" id="rMw-oJ-91l"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                <state key="normal" title="功能選單"/>
+                                <connections>
+                                    <action selector="QRCodeActionSheet:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Yem-2d-khG"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="4ju-EW-h3M" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="6sz-IE-2tj"/>
+                            <constraint firstItem="snB-aK-PZF" firstAttribute="top" secondItem="AOK-LV-C30" secondAttribute="bottom" constant="20" id="Ngj-3P-luq"/>
+                            <constraint firstItem="4ju-EW-h3M" firstAttribute="leading" relation="lessThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="135" id="PCo-tv-Pdb"/>
+                            <constraint firstAttribute="bottom" secondItem="snB-aK-PZF" secondAttribute="bottom" constant="241" id="S8I-5c-uUl"/>
+                            <constraint firstItem="AOK-LV-C30" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="W33-1G-USS"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="AOK-LV-C30" secondAttribute="trailing" constant="47" id="Ztq-qI-j3w"/>
+                            <constraint firstItem="snB-aK-PZF" firstAttribute="centerX" secondItem="4ju-EW-h3M" secondAttribute="centerX" id="c1o-YP-9OK"/>
+                            <constraint firstItem="AOK-LV-C30" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="fSb-fi-dAW"/>
+                            <constraint firstItem="4ju-EW-h3M" firstAttribute="top" secondItem="snB-aK-PZF" secondAttribute="bottom" constant="8" id="hcB-8C-u6o"/>
+                            <constraint firstItem="AOK-LV-C30" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="46" id="mDA-fJ-j3g"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="4ju-EW-h3M" secondAttribute="trailing" constant="135" id="r1M-nR-TM9"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="掃描" id="QNs-9W-EVT"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" prompted="NO"/>
+                    <connections>
+                        <outlet property="cameraView" destination="AOK-LV-C30" id="8hG-yE-bWa"/>
+                        <outlet property="qrcodeURL" destination="snB-aK-PZF" id="EoH-6W-0yH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="916" y="-179.46026986506749"/>
+        </scene>
+        <!--產生-->
+        <scene sceneID="jCT-Gb-Tih">
+            <objects>
+                <viewController id="Wuv-Rp-jga" customClass="GenQRCodeViewController" customModule="QRCode_Scanner" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ToE-6w-xTU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="請輸入網址" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SW5-AS-xIS">
+                                <rect key="frame" x="37.5" y="384" width="300" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="BrW-YE-dPR"/>
+                                    <constraint firstAttribute="height" constant="40" id="eX1-zR-EZa"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hTx-QK-6Up">
+                                <rect key="frame" x="62.5" y="89" width="250" height="250"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="bLK-dD-RXj"/>
+                                    <constraint firstAttribute="width" constant="250" id="bbb-sz-epq"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sm0-5d-PDR">
+                                <rect key="frame" x="107.5" y="454" width="160" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="y3h-c9-ZBd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                <state key="normal" title="產生 QR Code"/>
+                                <connections>
+                                    <action selector="genQRCode:" destination="Wuv-Rp-jga" eventType="touchUpInside" id="Opg-Ju-SCL"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="hTx-QK-6Up" firstAttribute="centerX" secondItem="QLf-Ko-F2S" secondAttribute="centerX" id="4Ln-QT-sYy"/>
+                            <constraint firstItem="hTx-QK-6Up" firstAttribute="top" secondItem="QLf-Ko-F2S" secondAttribute="top" constant="45" id="63e-Xi-jse"/>
+                            <constraint firstItem="sm0-5d-PDR" firstAttribute="top" secondItem="SW5-AS-xIS" secondAttribute="bottom" constant="30" id="65h-Ng-4Es"/>
+                            <constraint firstItem="QLf-Ko-F2S" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="sm0-5d-PDR" secondAttribute="trailing" constant="116" id="Fmd-9L-9HH"/>
+                            <constraint firstItem="SW5-AS-xIS" firstAttribute="top" secondItem="hTx-QK-6Up" secondAttribute="bottom" constant="45" id="Nhg-1o-pYR"/>
+                            <constraint firstItem="sm0-5d-PDR" firstAttribute="centerX" secondItem="QLf-Ko-F2S" secondAttribute="centerX" id="S0I-rP-hNP"/>
+                            <constraint firstItem="sm0-5d-PDR" firstAttribute="leading" relation="lessThanOrEqual" secondItem="QLf-Ko-F2S" secondAttribute="leading" constant="118" id="U3Q-jZ-On7"/>
+                            <constraint firstItem="SW5-AS-xIS" firstAttribute="centerX" secondItem="QLf-Ko-F2S" secondAttribute="centerX" id="dDy-dw-Mrg"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="QLf-Ko-F2S"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="產生" id="2TF-iv-1lG"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" prompted="NO"/>
+                    <connections>
+                        <outlet property="qrcodeImageView" destination="hTx-QK-6Up" id="mjT-i5-JOo"/>
+                        <outlet property="urlTextField" destination="SW5-AS-xIS" id="wLo-Gg-jR4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0wg-rT-Ibc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="915.94202898550736" y="490.17857142857139"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="o5v-jJ-Okf">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="aJN-Xj-3UQ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="kdE-it-h5O">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="Lgw-ch-TPj"/>
+                        <segue destination="Wuv-Rp-jga" kind="relationship" relationship="viewControllers" id="FQr-KA-Kgw"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vlq-ek-NGl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="138.40000000000001" y="101.19940029985008"/>
+        </scene>
+    </scenes>
+</document>
